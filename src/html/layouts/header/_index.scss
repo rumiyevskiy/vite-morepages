@@ -1,0 +1,25 @@
+.header {
+    background-color: #212223;
+    color: var(--c-white);
+}
+
+.header-top {
+    border-bottom: 1px solid var(--c-white);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+    }
+
+    .contact-info {
+        display: flex;
+        gap: 40px;
+
+        &__link {
+            &::before {
+                background-color: var(--c-lightgray);
+            }
+        }
+    }
+}
