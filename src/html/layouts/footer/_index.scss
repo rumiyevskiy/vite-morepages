@@ -1,0 +1,94 @@
+
+@use '../../../styles/mixins'as*;
+
+.footer {
+    background-image: url('/src/assets/images/footer-bg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 300;
+    color: var(--c-white);
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: var(--c-white);
+    margin-bottom: 24px;
+
+}
+
+.footer-details {
+    .logo {
+        display: block;
+        margin-bottom: 34px;
+    }
+
+    &__text {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.insta-blog {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+.contacts {
+
+    &__list {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+    
+}
+
+
+.subscribe-form {
+    &__group {
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px solid rgba(#ffffff, 0.6);        
+    }
+
+    &__input {
+        width: 100%;
+        padding: 18px;
+    }
+
+    &__btn {
+        padding: 18px;
+        mask-image: var(--icon-email);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-position: center;
+        background-color: var(--c-white);
+    }
+}
+
+
+.copy {
+    padding-top: 40px;
+    font-size: 12px;
+    color: var(--c-lightgray);
+}
