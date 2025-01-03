@@ -1,0 +1,31 @@
+.about {
+
+    &__inner {
+        display: flex;
+        justify-content: flex-end;
+
+        padding-block: 140px 175px;
+
+        background-image: url('/src/assets/images/home/about-bg.webp');
+        background-repeat: no-repeat;
+        background-size: 600px;
+        background-position: left center;
+    }
+
+    .content {
+        max-width: 470px;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .text {
+        margin-bottom: 25px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,25 @@
+@use '../../../../styles/mixins/'as*; //підключення міксинів
+
+.hero {
+    background-image: url('/src/assets/images/home/hero-bg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__inner {
+        height: 806px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        margin-bottom: 52px;
+    }
+
+    .text {
+        margin-bottom: 25px;
+        max-width: 310px;
+    }
+}

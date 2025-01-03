@@ -7,6 +7,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    padding-top: 50px;
+    padding-bottom: 20px;
+
     font-size: 14px;
     line-height: 16px;
     font-weight: 300;
@@ -15,6 +18,7 @@
     &__grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
     }
 }
 
@@ -59,11 +63,21 @@
             }
         }
     }
+
+    &__link {
+        transition: color 0.3s ease-in-out;
+
+        @include hover {
+            color: var(--c-pink);
+        }
+    }
     
 }
 
 
 .subscribe-form {
+    margin-bottom: 20px;
+
     &__group {
         display: flex;
         align-items: center;
@@ -74,15 +88,24 @@
     &__input {
         width: 100%;
         padding: 18px;
+        outline: 0;
+        color: var(--c-white);
     }
 
     &__btn {
-        padding: 18px;
+        width: 60px;
+        height: 50px;
+        padding: 18px 20px;
         mask-image: var(--icon-email);
         mask-repeat: no-repeat;
-        mask-size: contain;
+        mask-size: 24px;
         mask-position: center;
         background-color: var(--c-white);
+        transition: background-color 0.3s ease-in-out;
+
+        @include hover{
+            background-color: var(--c-pink);
+        }
     }
 }
 
