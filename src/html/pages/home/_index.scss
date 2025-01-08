@@ -2,6 +2,9 @@
 @use './about/about';
 @use './rental/rental';
 @use './choose/choose';
+@use './why/why';
+@use './feedback/feedback';
+@use './request/request';
 
 .home-page {
 
@@ -11,5 +14,11 @@
         left: 0;
         right: 0;
         background-color: transparent;
+
+        z-index: 10;
+
+        &.scrolled {
+            background-color: var(--c-dark);
+        }
     }
 }
