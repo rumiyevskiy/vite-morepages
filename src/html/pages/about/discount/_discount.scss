@@ -1,0 +1,24 @@
+@use '../../../../styles/mixins/'as*; //підключення міксинів
+
+.discount {
+    background-image: url('/src/assets/images/about/discount-bg.webp');
+
+    @include bg-cover;
+
+    padding-block: 80px;
+
+    &__inner {
+        display: flex;
+        // justify-content: flex-end;
+    }
+
+    .content {
+        max-width: 400px;
+        width: 100%;
+        margin-left: auto;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+}

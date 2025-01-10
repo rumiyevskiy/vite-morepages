@@ -17,6 +17,10 @@
 
         z-index: 10;
 
+        .header-bottom {
+            padding-block: 10px 30px;
+        }
+
         &.scrolled {
             background-color: var(--c-dark);
         }
