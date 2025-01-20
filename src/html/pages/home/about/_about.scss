@@ -1,31 +1,57 @@
+@use '../../../../styles/mixins/'as*; //підключення міксинів
+
 .about {
 
     &__inner {
         display: flex;
         justify-content: flex-end;
 
-        padding-block: 140px 175px;
+        padding-block: 140px 175px;        
 
         background-image: url('/src/assets/images/home/about-bg.webp');
         background-repeat: no-repeat;
         background-size: 600px;
         background-position: left center;
+
+        // для адаптації автор пропонує використати наступні міксини які працюють з властивостями padding-top та padding-bottom, і вони вказані що повинні дорівнювати 0, але вони перераховуються на інші цифри. треба розібратись.
+        // @include size ('padding-top', 140, 0, $md);
+        // @include size ('padding-bottom', 175, 0, $md);
+
+        // а нижче просто при розмірі екрана до 768px ($md = 768px, дивись у міксинах) вказується що padding-top та padding-bottom повинні дорівнювати 10px
+        @include rmax($md) {
+            padding-block: 35px;    
+            background-size: cover;        
+        }
     }
 
     .content {
         max-width: 470px;
+
+        text-shadow: 
+        2px 2px 0 rgba(255, 255, 255, 0.7),
+        -2px 2px 0 rgba(255, 255, 255, 0.7),
+        2px -2px 0 rgba(255, 255, 255, 0.7),
+        -2px -2px 0 rgba(255, 255, 255, 0.7);
     }
 
     .title {
         margin-bottom: 50px;
+
     }
 
     .text {
         margin-bottom: 25px;
+
+        @include rmax($md) {
+            font-size: 20px;   
+            font-weight: 500;         
+        }
     }
 
     .buttons {
         display: flex;
         gap: 10px;
+
+        text-shadow: none;
     }
 }

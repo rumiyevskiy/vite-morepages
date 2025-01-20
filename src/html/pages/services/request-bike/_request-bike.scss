@@ -1,0 +1,26 @@
+@use '../../../../styles/mixins/'as*; //підключення міксинів
+
+.request-bike {
+
+    padding-block: 100px 120px;
+    background-image: url('/src/assets/images/services/black-bicycle.webp');
+    background-repeat: no-repeat;
+    background-size: auto 660px;
+    background-position: right center;
+
+    .form-wrapper {
+        max-width: 450px;
+        padding: 50px 40px;
+    }
+
+    &__form {
+        color: var(--c-dark);
+
+        & .request-form {
+
+            &__input {
+                border-color: #9CAAC0;
+            }
+        }
+    }
+}
