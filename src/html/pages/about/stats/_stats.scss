@@ -1,3 +1,5 @@
+@use '../../../../styles/mixins/'as*; //підключення міксинів
+
 .stats {
 
     &__inner{
@@ -21,6 +23,15 @@
 .stats-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    @include rmax($lg) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    @include rmax($sm) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .stats-card {

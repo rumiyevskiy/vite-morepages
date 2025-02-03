@@ -6,11 +6,20 @@
 
         justify-content: flex-end;
 
-        padding-block: 60px 100px;
+        // padding-block: 60px 100px;
+
+        @include size ('padding-top', 60, 35);
+        @include size ('padding-bottom', 100, 35);
 
         background-image: url('/src/assets/images/services/services-advantages.webp');
 
         background-position: left center;
+
+        @include rmax($md) {
+            background-size: cover;
+            justify-content: flex-start;        
+        }
+
     }
     
 }

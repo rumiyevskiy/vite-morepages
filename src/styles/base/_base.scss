@@ -37,6 +37,8 @@ body {
   position: relative;
   overflow-x: hidden;
 
+  padding-top: 137px;
+
   //для прибиття футера до низу є два варианти
   //перший для grid
   // display: grid;
@@ -54,4 +56,6 @@ body {
 
 }
 
-
+.home-page > .wrapper{
+  padding-top: 0;
+}

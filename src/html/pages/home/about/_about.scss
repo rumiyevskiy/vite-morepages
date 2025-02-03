@@ -14,14 +14,14 @@
         background-position: left center;
 
         // для адаптації автор пропонує використати наступні міксини які працюють з властивостями padding-top та padding-bottom, і вони вказані що повинні дорівнювати 0, але вони перераховуються на інші цифри. треба розібратись.
-        // @include size ('padding-top', 140, 0, $md);
-        // @include size ('padding-bottom', 175, 0, $md);
+        @include size ('padding-top', 140, 0);
+        @include size ('padding-bottom', 175, 0);
 
         // а нижче просто при розмірі екрана до 768px ($md = 768px, дивись у міксинах) вказується що padding-top та padding-bottom повинні дорівнювати 10px
-        @include rmax($md) {
-            padding-block: 35px;    
-            background-size: cover;        
-        }
+        // @include rmax($md) {
+        //     padding-block: 35px;    
+        //     background-size: cover;        
+        // }
     }
 
     .content {

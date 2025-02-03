@@ -8,7 +8,19 @@
         gap: 100px;
         align-items: center;
 
-        padding-block: 60px 100px;        
+        // padding-block: 60px 100px;   
+        
+        @include size ('padding-top', 60, 0);
+        @include size ('padding-bottom', 100, 0);
+
+        @include rmax($xl) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        @include rmax($md) {
+            grid-template-columns: 1fr;
+        }
     }
 
     .video {
@@ -22,6 +34,10 @@
         background-position: center;
         cursor: pointer;
         transition: box-shadow 0.3s ease-in-out;
+
+        @include rmax($xl) {
+            height: auto;
+        }
 
         &::after {
             content: '';
@@ -47,10 +63,22 @@
 
     .content {
         max-width: 470px;
+        text-align: center;
+        @include rmax($md) {
+            margin-inline: auto;
+        }
     }
 
     .title {
         margin-bottom: 50px;
+
+        @include rmax($md) {
+            margin-bottom: 24px;
+            &::before {
+                margin-inline: auto;
+            }
+
+        }
     }
 
     .text {
@@ -60,5 +88,9 @@
     .buttons {
         display: flex;
         gap: 10px;
+
+        @include rmax($md) {
+            justify-content: center;
+        }
     }
 }

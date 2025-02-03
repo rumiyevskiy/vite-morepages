@@ -2,7 +2,11 @@
 
 .request-bike {
 
-    padding-block: 100px 120px;
+    // padding-block: 100px 120px;
+
+    @include size ('padding-top', 100, 35);
+    @include size ('padding-bottom', 120, 35);
+
     background-image: url('/src/assets/images/services/black-bicycle.webp');
     background-repeat: no-repeat;
     background-size: auto 660px;
@@ -11,6 +15,7 @@
     .form-wrapper {
         max-width: 450px;
         padding: 50px 40px;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     &__form {

@@ -8,13 +8,24 @@
 
     padding-block: 40px;
     margin-bottom: 20px;
+
+    @include rmax($lg) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include rmax($md) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .address-card {
 
     position: relative;
-    min-height: 100px;
-    padding-left: 130px;
+    // min-height: 100px;
+    // padding-left: 130px;
+
+    @include size ('min-height', 100, 48);
+    @include size ('padding-left', 130, 60);
 
     font-size: 20px;
 
@@ -25,8 +36,11 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 100px;
-        height: 100px;
+        // width: 100px;
+        // height: 100px;
+
+        @include size ('width', 100, 48);
+        @include size ('height', 100, 48);
     }
 
     &::before {
@@ -35,10 +49,14 @@
     }
 
     &::after {
-        width: 50px;
-        height: 50px;
+        // width: 50px;
+        // height: 50px;
+        @include size ('width', 50, 24);
+        @include size ('height', 50, 24);
         left: 25px;
         top: 25px;
+        @include size ('left', 25, 12);
+        @include size ('top', 25, 12);
 
         @include mask-contain;
         mask-image: var(--icon-location);
@@ -63,6 +81,7 @@
 
     &__text,
     &__link {
+        display: block;
         font-weight: 300;
     }
 }

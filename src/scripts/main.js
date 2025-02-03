@@ -16,13 +16,22 @@ window.addEventListener('scroll', () => {
 
 const swiper = new Swiper('.feedback .swiper', {
     
-  slidesPerView: 2,
+  slidesPerView: 1,
+  // centeredSlides: true,
+  loop: true,
     
     navigation: {
       nextEl: '.slider-btn--next',
       prevEl: '.slider-btn--prev',
     },
   
+    breakpoints: {
+      // when window width is >= 320px
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      }
+    }
     
 });
   

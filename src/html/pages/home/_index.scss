@@ -9,17 +9,10 @@
 .home-page {
 
     .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        
         background-color: transparent;
 
-        z-index: 10;
-
-        .header-bottom {
-            padding-block: 10px 30px;
-        }
+        
 
         &.scrolled {
             background-color: var(--c-dark);

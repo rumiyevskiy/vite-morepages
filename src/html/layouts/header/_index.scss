@@ -4,6 +4,12 @@
 .header {
     background-color: #212223;
     color: var(--c-white);
+
+    position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
 }
 
 .header-top {
@@ -43,6 +49,11 @@
 
 .header-bottom {
     padding-block: 30px 30px;
+
+    @include rmax($md) {
+
+        padding-block: 10px;
+    }
 }
 
 .nav {
@@ -60,7 +71,8 @@
         background-color: var(--c-pink);
 
         position: absolute;
-        top: calc(100% - 15px);
+        top: 100%;
+        // top: calc(100% - 15px);
         left: -200%;
         width: 100%;
         opacity: 0;

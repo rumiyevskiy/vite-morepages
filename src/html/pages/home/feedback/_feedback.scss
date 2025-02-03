@@ -1,23 +1,44 @@
 @use '../../../../styles/mixins/'as*; //підключення міксинів
 
 .feedback {
-    padding-block: 80px 60px;
+
+    // padding-block: 80px 60px;
+    @include size ('padding-top', 80, 35);
+    @include size ('padding-bottom', 60, 35);
 
     &__inner {
         display: grid;
-        grid-template-columns: 300px 860px;
-        // grid-template-columns: 300px auto;
+        // grid-template-columns: 300px 860px;
+        grid-template-columns: 300px auto;
+        @include rmax ($xl) {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+    }
 
+    .content {
+        @include rmax($xl) {
+            margin-inline: auto;
+            text-align: center;
+        }
     }
 
     .title {
         margin-bottom: 35px;
-
+        @include rmax($xl) {
+            &::before {
+                margin-inline: auto;
+            }
+        }
     }
 
     .slider-actions {
         display: flex;
         gap: 12px;
+        @include rmax($xl) {
+            // margin-inline: auto;
+            justify-content: center;
+        }
 
     }
 
@@ -68,6 +89,7 @@
 
     .slider {
         padding-block: 30px;
+        overflow: hidden;
     }
 
     .swiper-wrapper {
