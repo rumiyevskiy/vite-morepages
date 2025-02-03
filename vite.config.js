@@ -4,7 +4,7 @@ import postcss from '@vituum/vite-plugin-postcss';
 import { copyFileSync } from 'fs';
 
 export default {
-  base: "/vite-morepages",
+  base: "/vite-morepages/",
   plugins: [
     vituum(),
     postcss(),
